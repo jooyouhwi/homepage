@@ -12,7 +12,7 @@ public class homeMainController {
 	public String layout() {
 		System.out.println("index");
 		return "index";	
-	}
+	} 
 	
 	
 	@RequestMapping("/home")
