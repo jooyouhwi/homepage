@@ -22,7 +22,9 @@ import org.springframework.stereotype.Controller;
 import com.wow.api.common.StringUtil;
 import com.wow.api.dao.CertifiedMapper;
 import com.wow.api.model.CertifiedModel;
+
 import common.NameCheck;
+
 
 @Controller
 public class certifiedController {

@@ -14,19 +14,26 @@ public class homeMainController {
 		return "index";	
 	} 
 	
-	
 	@RequestMapping("/home")
-	public String home() {
+	public String home(Model model) {
 		System.out.println("home");
+		model.addAttribute("menu", "Home");
 		return "index";	
 	}
 	
-	
-	@RequestMapping("/menu")
-	public String menu(Model model) {
-		System.out.println("menu");
+	@RequestMapping("/about")
+	public String about(Model model) {
+		System.out.println("about");
 		// 기본 정보 조회 
-		model.addAttribute("userName", "Test");
-		return "sample/menu";	
+		model.addAttribute("menu", "About");
+		return "homepage/about";	
+	}
+	
+	@RequestMapping("/service")
+	public String service(Model model) {
+		System.out.println("service");
+		// 기본 정보 조회 
+		model.addAttribute("menu", "Service");
+		return "homepage/service";	
 	}
 }

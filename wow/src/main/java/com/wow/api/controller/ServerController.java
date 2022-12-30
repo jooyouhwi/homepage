@@ -56,8 +56,9 @@ public class ServerController {
 	@Autowired
 	private settlebankPayment settlebankPayment;
 	
-	@Autowired
-	private certifiedController certifiedController;
+	/*
+	 * @Autowired private certifiedController certifiedController;
+	 */
 	
 	@Autowired
 	private maccoReportController maccoReportController;
@@ -131,7 +132,7 @@ public class ServerController {
 			if(type.equals("account")) {          //계좌번호인증
     			 
 				try {
-					retMap = certifiedController.niceAccData(request, response); 
+					//retMap = certifiedController.niceAccData(request, response); 
     				 
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -139,7 +140,7 @@ public class ServerController {
 				}
 			}else if(type.equals("name")) {       //실명인증 
     			 try {
-    				 retMap = certifiedController.niceNameData(request, response);
+    				 //retMap = certifiedController.niceNameData(request, response);
     			 }catch (Exception e) {
  					// TODO Auto-generated catch block
  					e.printStackTrace();
